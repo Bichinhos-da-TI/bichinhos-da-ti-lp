@@ -1,0 +1,39 @@
+.theme-toggle-container {
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+}
+
+.theme-icon {
+  width: 12px;
+  height: 12px;
+  margin: 3px 4px;
+}
+
+.theme-toggle {
+  background-color: #f5f9fc;
+  width: 32px;
+  height: 18px;
+  border: none;
+  border-radius: 23px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  overflow: hidden;
+}
+
+.toggle-circle {
+  width: 12px;
+  height: 12px;
+  background-color: #2b3559;
+  border-radius: 23px;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle.dark .toggle-circle {
+  transform: translate(15px, -50%);
+}
