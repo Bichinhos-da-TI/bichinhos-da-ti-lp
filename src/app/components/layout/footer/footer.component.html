@@ -1,0 +1,19 @@
+<footer>
+  <div class="container">
+    <h5 class="title">Bichinhos da TI</h5>
+    <ul class="links">
+      <li *ngFor="let item of items">
+        <footer-link title="{{ item.title }}" href="{{ item.href }}" />
+      </li>
+    </ul>
+    <span class="contactText">{{ contactText }}</span>
+    <div class="socialNetworks">
+      <footer-social-network-icon
+        *ngFor="let item of socialNetworks"
+        href="{{ item.href }}"
+        image="{{ item.image }}"
+        alt="{{ item.alt }}"
+      />
+    </div>
+  </div>
+</footer>
