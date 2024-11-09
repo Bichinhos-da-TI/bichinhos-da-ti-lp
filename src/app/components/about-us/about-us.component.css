@@ -41,3 +41,9 @@ section {
   font-size: 24px;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: auto;
+  }
+}
