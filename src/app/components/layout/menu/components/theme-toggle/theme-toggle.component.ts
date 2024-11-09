@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './theme-toggle.component.css',
 })
 export class ThemeToggleComponent {
-  isDarkTheme: boolean = false;
+  isDarkTheme: boolean = true;
 
   toggleTheme() {
     this.isDarkTheme = !this.isDarkTheme;
