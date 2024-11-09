@@ -1,0 +1,12 @@
+<section id="quem-somos">
+  <div class="content">
+    <img src="assets/quem-somos.png" />
+    <div class="content-text">
+      <h4 class="title">{{ title }}</h4>
+      <div class="advantage" *ngFor="let advantage of advantagesList">
+        <p>{{ advantage }}</p>
+      </div>
+    </div>
+  </div>
+  <app-section-divider color="var(--yellow-cat)" />
+</section>
