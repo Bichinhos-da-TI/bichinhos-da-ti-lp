@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 @Component({
-  selector: 'app-theme-toggle',
+  selector: 'menu-theme-toggle',
   standalone: true,
   imports: [],
   templateUrl: './theme-toggle.component.html',
