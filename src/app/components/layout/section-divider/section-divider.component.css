@@ -1,0 +1,84 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 340px;
+  height: 84px;
+}
+
+.major-line {
+  height: 3px;
+  width: 262px;
+}
+
+.major-line::before {
+  filter: blur(5px) drop-shadow(0px 2px 20px var(--shadow-color));
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 262px;
+  height: 3px;
+  background-color: var(--shadow-color);
+}
+
+.lesser-line {
+  height: 3px;
+  width: 26px;
+}
+
+.lesser-line::before {
+  filter: blur(5px) drop-shadow(0px 2px 20px var(--shadow-color));
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 26px;
+  height: 3px;
+  background-color: var(--shadow-color);
+}
+
+.elipse {
+  width: 20px;
+  height: 20px;
+  background: none;
+  border-radius: 50%;
+}
+
+.elipse::before {
+  filter: blur(8px) drop-shadow(0px 2px 20px var(--shadow-color));
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--shadow-color);
+}
+
+.lesser-line.left {
+  position: absolute;
+  top: 50px;
+  left: -20px;
+  transform: rotate(128.87deg);
+}
+
+.elipse.left {
+  position: absolute;
+  top: 60.2px;
+  left: -26px;
+}
+
+.lesser-line.right {
+  position: absolute;
+  top: 30.7px;
+  right: 58px;
+  transform: rotate(127.87deg);
+}
+
+.elipse.right {
+  position: absolute;
+  top: 6px;
+  right: 48px;
+}
