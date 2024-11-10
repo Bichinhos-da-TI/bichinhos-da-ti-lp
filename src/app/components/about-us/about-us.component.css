@@ -33,6 +33,7 @@ section {
   border-radius: 32px;
   min-height: 119px;
   max-width: 538px;
+  width: 100%;
   padding: 16px;
 }
 
@@ -40,7 +41,17 @@ section {
   color: var(--gray);
   font-size: 24px;
   text-align: center;
-  word-break: break-all;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .advantage p {
+    font-size: 16px;
+    text-align: start;
+  }
 }
 
 @media (max-width: 1024px) {
