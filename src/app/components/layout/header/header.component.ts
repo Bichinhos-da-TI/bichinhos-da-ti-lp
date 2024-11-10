@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
 
 @Component({
-  selector: 'app-menu',
+  selector: 'app-header',
   standalone: true,
   imports: [ThemeToggleComponent],
-  templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css',
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.css',
 })
-export class MenuComponent {}
+export class HeaderComponent {}
