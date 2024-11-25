@@ -1,0 +1,36 @@
+#impact-projects {
+  background-color: var(--dark-blue-1, #050a1a);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 893px;
+}
+#title-section {
+  color: var(--orange-frog, #f76b00);
+  font-family: var(--title, "Krona One", sans-serif);
+  align-items: center;
+  font-size: 40px;
+}
+#project-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 332px;
+  align-items: center;
+  justify-content: center;
+}
+#project-title {
+  color: var(--gray, #f5f9fc);
+  font-family: var(--title, "Krona One", sans-serif);
+  font-weight: 400;
+  line-height: 28.8px;
+  font-size: 24px;
+}
+#image-container {
+}
+#project-description {
+  color: var(--gray, #f5f9fc);
+  font-family: var(--text, "Jura", sans-serif);
+  font-weight: 500;
+  line-height: 22.4px;
+}
