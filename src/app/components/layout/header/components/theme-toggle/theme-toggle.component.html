@@ -1,12 +1,13 @@
 <div class="theme-toggle-container">
   <img src="assets/white-icon.svg" alt="Light Mode Icon" class="theme-icon" />
+
   <button
     class="theme-toggle"
     (click)="toggleTheme()"
     [class.dark]="isDarkTheme"
-    disabled="{{ true }}"
   >
     <span class="toggle-circle"></span>
   </button>
+
   <img src="assets/dark-icon.svg" alt="Dark Mode Icon" class="theme-icon" />
 </div>

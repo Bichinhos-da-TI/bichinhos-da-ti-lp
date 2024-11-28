@@ -1,10 +1,16 @@
 <section id="impact-projects">
-  <h1 id="title-section">Projetos que Fazem a Diferença</h1>
-  <div *ngFor="let container of containers" id="project-container">
-    <h2 id="project-title">{{ container.title }}</h2>
-    <div id="image-container">
-      <img [src]="container.imagem" alt="" />
+  <h1 class="title-section">Projetos que Fazem a Diferença</h1>
+  <div class="container-projects">
+    <div *ngFor="let container of containers" class="project-card">
+      <h2 class="project-title">{{ container.title }}</h2>
+      <div class="image-container">
+        <img [src]="container.imagem" alt="" />
+      </div>
+      <p class="project-description">{{ container.descricao }}</p>
     </div>
-    <p id="project-description">{{ container.descricao }}</p>
   </div>
+  <app-section-divider
+    color="#F76B00"
+    style="margin-top: 64px"
+  ></app-section-divider>
 </section>

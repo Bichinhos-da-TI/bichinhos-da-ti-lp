@@ -11,6 +11,7 @@ header {
   position: fixed;
   z-index: 1000;
 }
+
 .main-nav {
   display: flex;
   flex-direction: row;
@@ -35,4 +36,131 @@ header {
 
 .logo-link {
   margin-right: 64px;
+}
+
+.form-container {
+  position: fixed;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 558px;
+  min-height: 719px;
+  background-color: var(--dark-blue-1, #050a1a);
+  border-radius: 16px;
+  border: 3px solid var(--blue-duck, #33c4cb);
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.enter-animation {
+  animation-name: slideDown;
+}
+
+.exit-animation {
+  animation: slideOutWithPause 1s ease-in-out forwards;
+}
+.form-content {
+  background-color: var(--dark-blue-1, #050a1a);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 494px;
+  min-height: 655px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.close-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.form-title {
+  font-family: var(--title, "Krona One", sans-serif);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38.4px;
+  text-align: center;
+  color: var(--orange-frog, #f76b00);
+  margin-bottom: 24px;
+}
+.form-description {
+  max-width: 494px;
+  min-height: 88px;
+  font-family: var(--text, "Jura", sans-serif);
+  font-weight: 500;
+  line-height: 22.4px;
+  color: var(--gray, #f5f9fc);
+}
+.form-input {
+  max-width: 494px;
+  min-height: 54px;
+  border-radius: 8px;
+  border: 2px solid var(--gray, #f5f9fc);
+  padding: 16px;
+  gap: 8px;
+  background-color: transparent;
+  margin-top: 16px;
+}
+.form-input::placeholder {
+  font-family: var(--text, "Jura", sans-serif);
+  font-weight: 700;
+  line-height: 22.4px;
+  color: var(--gray, #f5f9fc);
+}
+.form-button {
+  max-width: 494px;
+  min-height: 53px;
+  background-color: var(--orange-frog, #f76b00);
+  border: none;
+  border-radius: 16px;
+  padding: 12px 48px 12px 48px;
+  display: flex;
+  gap: 10px;
+  box-shadow: 0px 2px 20px 0px #f76b00;
+  justify-content: center;
+  font-family: var(--title, "Krona One", sans-serif);
+  color: var(--Gray, #f5f9fc);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28.8px;
+  margin-top: 24px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -150%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes slideOutWithPause {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  80% {
+    transform: translate(-50%, -90%);
+  }
+  85% {
+    transform: translate(-50%, -91.5%);
+  }
+  100% {
+    transform: translate(-50%, -100%);
+  }
 }

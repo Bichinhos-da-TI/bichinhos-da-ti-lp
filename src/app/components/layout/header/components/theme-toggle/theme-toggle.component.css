@@ -38,6 +38,6 @@
 }
 
 .theme-toggle.dark .toggle-circle {
-  transform: translate(15px, -50%);
+  transform: translateX(15px) translateY(-50%);
   background-color: #2b3559;
 }

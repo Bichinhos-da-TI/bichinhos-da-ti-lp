@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SectionDividerComponent } from '../layout/section-divider/section-divider.component';
 
 @Component({
   selector: 'app-highlight-impact-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SectionDividerComponent],
   templateUrl: './highlight-impact-projects.component.html',
   styleUrl: './highlight-impact-projects.component.css',
 })

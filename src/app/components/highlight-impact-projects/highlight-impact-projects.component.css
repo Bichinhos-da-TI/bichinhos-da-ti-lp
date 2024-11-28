@@ -1,36 +1,50 @@
 #impact-projects {
   background-color: var(--dark-blue-1, #050a1a);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 893px;
+  padding: 64px 158px 64px 158px;
 }
-#title-section {
+.title-section {
   color: var(--orange-frog, #f76b00);
   font-family: var(--title, "Krona One", sans-serif);
+  font-weight: 400;
   align-items: center;
   font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 64px;
 }
-#project-container {
+.container-projects {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.project-card {
   display: flex;
   flex-direction: column;
   max-width: 332px;
   align-items: center;
   justify-content: center;
+  margin-right: 64px;
 }
-#project-title {
+.project-title {
   color: var(--gray, #f5f9fc);
   font-family: var(--title, "Krona One", sans-serif);
   font-weight: 400;
   line-height: 28.8px;
   font-size: 24px;
+  margin-bottom: 16px;
 }
-#image-container {
+.image-container {
 }
-#project-description {
+.project-description {
   color: var(--gray, #f5f9fc);
   font-family: var(--text, "Jura", sans-serif);
   font-weight: 500;
   line-height: 22.4px;
+  text-align: center;
+  margin-top: 16px;
 }
