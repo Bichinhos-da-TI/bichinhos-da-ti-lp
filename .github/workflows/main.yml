@@ -4,15 +4,15 @@ name: Deploy Angular para GitHub Pages
 on:
   push:
     branches:
-      - main # Ajuste para a branch principal do seu projeto
+      - main 
   pull_request:
     branches:
       - main
-  workflow_dispatch: # Permite rodar manualmente pelo GitHub Actions
+  workflow_dispatch: 
 
 jobs:
   build:
-    runs-on: ubuntu-latest # Runner utilizado para executar os jobs
+    runs-on: ubuntu-latest 
 
     steps:
       # Checkout do código no repositório
@@ -23,7 +23,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18 # Substitua pela versão Node.js necessária ao projeto
+          node-version: 18 
 
       # Instalar dependências
       - name: Install Dependencies
@@ -37,5 +37,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # Token para autenticação
-          publish_dir: ./dist/bichinhos-da-ti-lp # Substitua pelo nome correto do diretório gerado pelo build
+          github_token: ${{ secrets.GITHUB_TOKEN }} 
+          publish_dir: ./dist/browser
