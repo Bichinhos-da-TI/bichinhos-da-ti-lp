@@ -31,7 +31,7 @@ jobs:
 
      
       - name: Build
-        run: npm run build --prod
+        run: npm run build --omit=dev
 
      
       - name: Deploy gh-pages
@@ -39,7 +39,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }} 
           publish_dir: ./dist/browser  # Diretório onde os arquivos da build estão gerados
-          target_branch: gh-pages  # A branch de destino para o GitHub Pages
+          publish_branch: gh-pages  # A branch de destino para o GitHub Pages
           cname: "www.bichinhosdati.com.br" # Se você estiver utilizando um domínio personalizado (opcional)
 
      
