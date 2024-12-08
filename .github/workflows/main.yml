@@ -38,7 +38,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }} 
-          publish_dir: ./dist/browser  # Diretório onde os arquivos da build estão gerados
+          publish_dir: ./dist/bichinhos-da-ti-lp/browser  # Diretório onde os arquivos da build estão gerados
           publish_branch: gh-pages  # A branch de destino para o GitHub Pages
           cname: "www.bichinhosdati.com.br" # Se você estiver utilizando um domínio personalizado (opcional)
 
