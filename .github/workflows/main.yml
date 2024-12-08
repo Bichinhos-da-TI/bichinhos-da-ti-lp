@@ -1,0 +1,41 @@
+name: Deploy Angular para GitHub Pages
+
+# Triggers para executar a pipeline
+on:
+  push:
+    branches:
+      - main # Ajuste para a branch principal do seu projeto
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: # Permite rodar manualmente pelo GitHub Actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Runner utilizado para executar os jobs
+
+    steps:
+      # Checkout do código no repositório
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Configurar Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # Substitua pela versão Node.js necessária ao projeto
+
+      # Instalar dependências
+      - name: Install Dependencies
+        run: npm install
+
+      # Build do projeto Angular
+      - name: Build Angular App
+        run: npm run build --prod
+
+      # Deploy no GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Token para autenticação
+          publish_dir: ./dist/bichinhos-da-ti-lp # Substitua pelo nome correto do diretório gerado pelo build
