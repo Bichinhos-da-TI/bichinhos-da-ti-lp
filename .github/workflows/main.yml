@@ -15,27 +15,31 @@ jobs:
     runs-on: ubuntu-latest 
 
     steps:
-      # Checkout do código no repositório
-      - name: Checkout Code
+     
+      - name: Checkout de código
         uses: actions/checkout@v4
 
-      # Configurar Node.js
-      - name: Setup Node.js
+    
+      - name: Configuração do Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18 
 
-      # Instalar dependências
-      - name: Install Dependencies
+      
+      - name: Instalação de dependências
         run: npm install
 
-      # Build do projeto Angular
-      - name: Build Angular App
+     
+      - name: Build
         run: npm run build --prod
 
-      # Deploy no GitHub Pages
-      - name: Deploy to GitHub Pages
+     
+      - name: Deploy gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }} 
-          publish_dir: ./dist/browser
+          publish_dir: ./dist/browser  # Diretório onde os arquivos da build estão gerados
+          target_branch: gh-pages  # A branch de destino para o GitHub Pages
+          cname: "www.bichinhosdati.com.br" # Se você estiver utilizando um domínio personalizado (opcional)
+
+     
