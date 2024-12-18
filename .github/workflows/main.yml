@@ -1,0 +1,45 @@
+name: Deploy Angular para GitHub Pages
+
+# Triggers para executar a pipeline
+on:
+  push:
+    branches:
+      - main 
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest 
+
+    steps:
+     
+      - name: Checkout de código
+        uses: actions/checkout@v4
+
+    
+      - name: Configuração do Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 
+
+      
+      - name: Instalação de dependências
+        run: npm install
+
+     
+      - name: Build
+        run: npm run build --omit=dev
+
+     
+      - name: Deploy gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} 
+          publish_dir: ./dist/bichinhos-da-ti-lp/browser  # Diretório onde os arquivos da build estão gerados
+          publish_branch: gh-pages  # A branch de destino para o GitHub Pages
+          cname: "www.bichinhosdati.com.br" # Se você estiver utilizando um domínio personalizado (opcional)
+
+     
