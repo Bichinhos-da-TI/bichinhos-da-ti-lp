@@ -3,7 +3,7 @@
   width: 100vw;
 }
 
-.main::after {
+.main::before {
   content: "";
   position: absolute;
   top: 0;
