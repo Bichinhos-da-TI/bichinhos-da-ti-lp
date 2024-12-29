@@ -11,5 +11,5 @@ import { FooterComponent } from './components/layout/footer/footer.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'bichinhos-da-ti-lp';
+  title = 'Bichinhos da TI';
 }
