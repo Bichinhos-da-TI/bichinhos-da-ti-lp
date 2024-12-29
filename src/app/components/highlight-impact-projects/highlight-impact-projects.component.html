@@ -4,7 +4,7 @@
     <div *ngFor="let container of containers" class="project-card">
       <h2 class="project-title">{{ container.title }}</h2>
       <div class="image-container">
-        <img [src]="container.imagem" alt="" />
+        <img [src]="container.imagem" class="image-projects" alt="" />
       </div>
       <p class="project-description">{{ container.descricao }}</p>
     </div>

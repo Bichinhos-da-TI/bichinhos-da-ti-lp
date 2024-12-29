@@ -48,3 +48,47 @@
   text-align: center;
   margin-top: 16px;
 }
+
+@media (max-width: 480px) {
+  #impact-projects {
+    display: grid;
+    place-content: center;
+    padding: 64px 57px 64px 57px;
+    gap: 64px;
+  }
+  .title-section {
+    width: 261px;
+    min-height: 87px;
+    font-size: 24px;
+    line-height: 28.8px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .container-projects {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+  }
+  .project-card {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 16px;
+  }
+  .project-title {
+  }
+  .image-container {
+    margin: 0 auto;
+  }
+  .image-projects {
+    max-width: 261px;
+    min-height: 261px;
+  }
+  .project-description {
+    width: 261px;
+  }
+  app-section-divider {
+    width: 215px;
+  }
+}

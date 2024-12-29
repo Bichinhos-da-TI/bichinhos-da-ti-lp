@@ -140,6 +140,9 @@ header {
   cursor: pointer;
   white-space: nowrap;
 }
+.menu-hamburguer-container {
+  display: none;
+}
 
 @keyframes slideDown {
   from {
@@ -162,5 +165,29 @@ header {
   }
   100% {
     transform: translate(-50%, -100%);
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    min-height: 96px;
+    justify-content: space-between;
+    padding-right: 57px;
+    padding-left: 57px;
+  }
+  .main-nav {
+  }
+  .nav-item {
+    display: none;
+  }
+  .logo-link {
+    max-width: 148px;
+    min-height: 35.12px;
+  }
+  header-theme-toggle {
+    display: none;
+  }
+  .menu-hamburguer-container {
+    display: block;
   }
 }
