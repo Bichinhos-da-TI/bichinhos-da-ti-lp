@@ -1,0 +1,15 @@
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  background-color: var(--dark-blue-1);
+  padding: 64px 0;
+  min-height: 752px;
+  align-items: center;
+}
+
+.title {
+  font-family: "Krona One";
+  font-size: 40px;
+  color: var(--gray-ai);
+}

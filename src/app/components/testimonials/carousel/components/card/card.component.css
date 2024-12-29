@@ -1,0 +1,66 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: "Jura", sans-serif;
+  font-size: 32px;
+  width: 402px;
+  height: 407px;
+  border: 2px solid var(--blue-duck);
+  border-radius: 11px;
+  padding: 32px;
+  transition: scale 0.5s ease-in-out, opacity 0.5s ease-in-out,
+    padding 0.5s ease-in-out, font-size 0.5s ease-in-out;
+  opacity: 0.5;
+  scale: 0.7;
+  cursor: grab;
+}
+
+.active {
+  transition: scale 0.5s ease-in-out, opacity 0.5s ease-in-out,
+    padding 0.5s ease-in-out, font-size 0.5s ease-in-out;
+  opacity: 1;
+  scale: 1;
+}
+
+.mainInformations {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.mainInformations > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.image {
+  height: 139px;
+  width: 139px;
+  border-radius: 50%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.name {
+  font-family: "Krona One", sans-serif;
+  font-size: 32px;
+  color: var(--yellow-cat);
+  max-width: 185px;
+}
+
+.role {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--orange-frog);
+}
+
+.testimonial {
+  font-family: "Jura", sans-serif;
+  color: var(--gray);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+}
