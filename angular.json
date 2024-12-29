@@ -25,7 +25,7 @@
               }
             ],
             "styles": ["src/styles/globals.css"],
-            "scripts": [],
+            "scripts": ["node_modules/hammerjs/hammer.min.js"],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {

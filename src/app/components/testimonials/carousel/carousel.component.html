@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="carousel">
+    <div
+      #carousel
+      class="cards-container"
+      [ngStyle]="{ transform, transition }"
+    >
+      <carousel-card
+        *ngFor="let card of cards; let i = index"
+        [image]="card.image"
+        [name]="card.name"
+        [role]="card.role"
+        [testimonial]="card.testimonial"
+        [isActive]="i === currentCardIndex"
+        (swipeleft)="next()"
+        (swiperight)="previous()"
+      />
+    </div>
+  </div>
+
+  <carousel-back-arrow
+    class="left"
+    (click)="previous()"
+    [style]="{ cursor: 'pointer' }"
+  />
+  <carousel-next-arrow
+    class="right"
+    (click)="next()"
+    [style]="{ cursor: 'pointer' }"
+  />
+  <!-- <div class="arrows-container">
+  </div> -->
+</div>

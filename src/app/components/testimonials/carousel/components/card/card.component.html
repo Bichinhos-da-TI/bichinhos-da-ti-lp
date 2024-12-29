@@ -1,0 +1,10 @@
+<div [ngClass]="{ wrapper: true, active: isActive() }">
+  <div class="mainInformations">
+    <img class="image" src="{{ image() }}" alt="{{ name() }}" />
+    <div>
+      <h4 class="name">{{ name() }}</h4>
+      <span class="role">{{ role() }}</span>
+    </div>
+  </div>
+  <p class="testimonial">{{ testimonial() }}</p>
+</div>
