@@ -6,11 +6,52 @@
         alt="Logo-bichinhos"
         class="logo-link"
     /></a>
-    <li class="nav-item"><a href="#" class="nav-link">Quem somos</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Nossos projetos</a></li>
+    <li class="nav-item">
+      <a
+        href="javascript:void(0);"
+        (click)="scrollToSection('hero')"
+        class="nav-link"
+        >Quem somos</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        href="javascript:void(0);"
+        (click)="scrollToSection('impact-projects')"
+        class="nav-link"
+        >Nossos projetos</a
+      >
+    </li>
     <li class="nav-item"><a href="#" class="nav-link">Depoimentos</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Faça parte</a></li>
+    <li class="nav-item">
+      <a href="#" class="nav-link" (click)="openModal()">Faça parte</a>
+    </li>
+    <div *ngIf="isModalOpen" class="form-container" [ngClass]="modalAnimation">
+      <div class="form-content" (click)="$event.stopPropagation()">
+        <div class="close-container">
+          <button class="btn-close" (click)="closeModal()">
+            <img src="assets/close-button.svg" alt="botao fechar" />
+          </button>
+        </div>
+        <h1 class="form-title">JUNTE-SE A NÓS!</h1>
+        <p class="form-description">
+          Se você é um profissional de TI em transição de carreira ou um novato
+          buscando fazer a diferença, queremos você na Bichinhos da TI. Venha
+          ser um voluntário e ajude a construir projetos que impactam o futuro
+          da tecnologia.
+        </p>
+        <input type="text" placeholder="Nome" class="form-input" />
+        <input type="text" placeholder="Email" class="form-input" />
+        <input type="text" placeholder="Telefone" class="form-input" />
+        <input type="text" placeholder="LinkedIn" class="form-input" />
+        <input type="text" placeholder="Área" class="form-input" />
+        <button class="form-button">QUERO SER VOLUNTÁRIO</button>
+      </div>
+    </div>
     <li class="nav-item"></li>
     <header-theme-toggle />
+    <div class="menu-hamburguer-container">
+      <img src="assets/menu-hamburguer.svg" alt="" />
+    </div>
   </ul>
 </header>
