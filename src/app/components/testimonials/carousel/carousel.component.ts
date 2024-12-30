@@ -1,11 +1,9 @@
 import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
   Component,
   ElementRef,
   ViewChild,
 } from '@angular/core';
-import { AsyncPipe, CommonModule } from '@angular/common';
+import {  CommonModule } from '@angular/common';
 
 import { cards } from '../../../../data/testimonials';
 import { CardComponent } from './components/card/card.component';
@@ -26,11 +24,9 @@ import { CarouselCard } from '../../../interfaces/card';
   styleUrl: './carousel.component.css',
 })
 export class CarouselComponent {
-  constructor(private cdr: ChangeDetectorRef) {}
-
   @ViewChild('carousel', { static: false })
   carousel!: ElementRef<HTMLDivElement>;
-
+  
   carouselCards = [...cards];
   cardId: number = 1;
   currentCardIndex: number = 1;
@@ -38,6 +34,10 @@ export class CarouselComponent {
   transitionTime: number = 0.5;
   cardsAddedCount: number = 1;
   indexCount: number = 0;
+  
+  get carouselWidth(): number {
+    return this.carousel.nativeElement.clientWidth;
+  }  
 
   get cards(): CarouselCard[] {
     return this.carouselCards;
@@ -55,15 +55,23 @@ export class CarouselComponent {
     return `transform ${this.transitionTime}s ease-out`;
   }
 
-  get getCardsPx() {
-    return this.carousel.nativeElement.clientWidth / 3;
+  get getCardsPx(): number {
+    if (this.carouselWidth > 768) {
+      return this.carouselWidth / 3;
+    }
+
+    return this.carouselWidth;
   }
 
   async previous(): Promise<void> {
-    const nextIndex = --this.currentCardIndex;
-    const cardsPx = this.getCardsPx - 6;
+    if (this.carouselWidth < 768) {
+      this.currentCardIndex = 0;
+    }
 
-    if (nextIndex === 0) {
+    const nextIndex = --this.currentCardIndex;
+    const cardsPx = this.getCardsPx - (this.carouselWidth > 768 ? 6 : 61);
+
+    if (nextIndex === 0 || nextIndex < 0) {
       await this.addCardsAtStart();
 
       setTimeout(() => {
@@ -86,8 +94,12 @@ export class CarouselComponent {
   }
 
   async next(): Promise<void> {
-    const nextIndex = this.currentCardIndex + 1;
-    const cardsPx = this.getCardsPx - 6;
+    if (this.carouselWidth < 768) {
+      this.currentCardIndex = 0;
+    }
+
+    const nextIndex = ++this.currentCardIndex;
+    const cardsPx = this.getCardsPx - (this.carouselWidth > 768 ? 6 : 61);
 
     if (nextIndex === this.carouselCards.length - 1) {
       await this.addCardsAtEnd();

@@ -37,8 +37,12 @@ footer {
   justify-content: end;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 576px) {
   footer {
     padding: 64px 57px;
+  }
+
+  .socialNetworks {
+    justify-content: center;
   }
 }

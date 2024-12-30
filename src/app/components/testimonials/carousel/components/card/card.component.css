@@ -5,7 +5,8 @@
   font-family: "Jura", sans-serif;
   font-size: 32px;
   width: 402px;
-  height: 407px;
+  max-height: 407px;
+  height: 100%;
   border: 2px solid var(--blue-duck);
   border-radius: 11px;
   padding: 32px;
@@ -63,4 +64,35 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 19.6px;
+}
+
+
+@media screen and (max-width: 576px) {
+ .wrapper  {
+  width: 261px;
+  max-height: 681px;
+  padding: 32px 16px;
+  gap: 16px;
+  opacity: 1;
+  scale: 1;
+ }
+ 
+ .mainInformations {
+  flex-direction: column;
+  align-items: start;
+ }
+
+ .name {
+  font-size: 24px;
+ }
+
+ .role {
+  font-size: 16px;
+ }
+
+ .image {
+  align-self: center;
+  width: 229px;
+  height: 229px;
+ }
 }

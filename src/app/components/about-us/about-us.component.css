@@ -12,6 +12,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
+  justify-items: center;
 }
 
 .content-text {
@@ -46,11 +47,20 @@ section {
 @media (min-width: 320px) and (max-width: 767px) {
   .title {
     font-size: 24px;
+    text-align: start;
   }
 
   .advantage p {
     font-size: 16px;
     text-align: start;
+  }
+
+  .content {
+    padding: 0 56px;
+  }
+
+  img {
+    width: 261px;
   }
 }
 
