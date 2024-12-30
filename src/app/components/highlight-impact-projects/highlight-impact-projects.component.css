@@ -1,4 +1,4 @@
-#impact-projects {
+section {
   background-color: var(--dark-blue-1, #050a1a);
   display: flex;
   flex-direction: column;
