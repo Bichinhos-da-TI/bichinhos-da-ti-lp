@@ -30,15 +30,24 @@ section {
 }
 
 .advantage {
+  display: flex;
   border: 3px solid var(--yellow-cat);
   border-radius: 32px;
   min-height: 119px;
   max-width: 538px;
   width: 100%;
   padding: 16px;
+  transition: opacity 0.4s ease-in-out, scale 0.4s ease-in-out;
+  opacity: 0.8;
+  scale: 0.8;
 }
 
-.advantage p {
+.advantage:hover {
+  opacity: 1;
+  scale: 1;
+}
+
+.advantage span {
   color: var(--alt-dark-blue, var(--gray));
   font-size: 24px;
   text-align: center;
@@ -64,7 +73,7 @@ section {
   }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .content {
     grid-template-columns: auto;
   }
