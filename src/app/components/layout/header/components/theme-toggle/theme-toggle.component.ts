@@ -13,9 +13,11 @@ export class ThemeToggleComponent {
     this.isDarkTheme = !this.isDarkTheme;
     const body = document.body;
     if (this.isDarkTheme) {
+      body.classList.remove('light');
       body.classList.add('dark');
     } else {
       body.classList.remove('dark');
+      body.classList.add('light');
     }
   }
 }

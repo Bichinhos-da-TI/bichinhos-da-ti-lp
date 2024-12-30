@@ -1,5 +1,5 @@
 header {
-  background-color: #030612;
+  background-color: var(--dark-blue-2);
   width: 100%;
   height: 96px;
   font-family: var(--text, "Jura", sans-serif);
