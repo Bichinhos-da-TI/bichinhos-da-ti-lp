@@ -8,6 +8,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .dark {
   --blue-duck: #33c4cb;
   --dark-blue: #2b3559;
