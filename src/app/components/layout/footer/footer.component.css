@@ -37,6 +37,16 @@ footer {
   justify-content: end;
 }
 
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray-ai);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
 @media (max-width: 576px) {
   footer {
     padding: 64px 57px;

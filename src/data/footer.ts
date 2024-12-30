@@ -1,3 +1,7 @@
+import { DiscordIconComponent } from 'src/app/components/layout/footer/components/discord-icon/discord-icon.component';
+import { InstagramIconComponent } from 'src/app/components/layout/footer/components/instagram-icon/instagram-icon.component';
+import { LinkedinIconComponent } from 'src/app/components/layout/footer/components/linkedin-icon/linkedin-icon.component';
+
 export const menuItems = [
   {
     title: 'Inicio',
@@ -23,17 +27,17 @@ export const contactText =
 export const socialNetworks = [
   {
     href: 'https://www.instagram.com/bichinhosdati/',
-    image: 'assets/instagram.svg',
     alt: 'Instagram',
+    icon: InstagramIconComponent,
   },
   {
     href: 'https://www.linkedin.com/company/bichinhosdati/',
-    image: 'assets/linkedin.svg',
     alt: 'Linkedin',
+    icon: LinkedinIconComponent,
   },
   {
     href: '',
-    image: 'assets/discord.svg',
     alt: 'Discord',
+    icon: DiscordIconComponent,
   },
 ];

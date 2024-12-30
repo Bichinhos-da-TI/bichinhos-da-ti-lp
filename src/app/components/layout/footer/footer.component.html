@@ -8,12 +8,13 @@
     </ul>
     <span class="contactText">{{ contactText }}</span>
     <div class="socialNetworks">
-      <footer-social-network-icon
-        *ngFor="let item of socialNetworks"
-        href="{{ item.href }}"
-        image="{{ item.image }}"
-        alt="{{ item.alt }}"
-      />
+      <div class="icons" *ngFor="let item of socialNetworks">
+        <a target="_blank" href="{{ item.href }}"
+          ><ng-template
+            *ngComponentOutlet="item.icon; injector: createInjector()"
+          ></ng-template
+        ></a>
+      </div>
     </div>
   </div>
 </footer>
