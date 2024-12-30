@@ -39,7 +39,7 @@ section {
 }
 
 .advantage p {
-  color: var(--gray);
+  color: var(--alt-dark-blue, var(--gray));
   font-size: 24px;
   text-align: center;
 }

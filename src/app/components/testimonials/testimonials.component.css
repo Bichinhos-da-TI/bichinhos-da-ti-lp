@@ -11,7 +11,7 @@
 .title {
   font-family: "Krona One";
   font-size: 40px;
-  color: var(--gray-ai);
+  color: var(--alt-blue-duck,var(--gray-ai));
 }
 
 @media screen and (max-width: 1024px) {

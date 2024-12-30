@@ -9,6 +9,7 @@
   height: 100%;
   border: 2px solid var(--blue-duck);
   border-radius: 11px;
+  background-color: var(--alt-dark-blue-1, transparent);
   padding: 32px;
   transition: scale 0.5s ease-in-out, opacity 0.5s ease-in-out,
     padding 0.5s ease-in-out, font-size 0.5s ease-in-out;
@@ -48,7 +49,7 @@
 .name {
   font-family: "Krona One", sans-serif;
   font-size: 32px;
-  color: var(--yellow-cat);
+  color: var(--alt-yellow-cat, var(--yellow-cat));
   max-width: 185px;
 }
 
@@ -60,12 +61,11 @@
 
 .testimonial {
   font-family: "Jura", sans-serif;
-  color: var(--gray);
+  color: var(--alt-gray, var(--gray));
   font-size: 14px;
   font-weight: 500;
   line-height: 19.6px;
 }
-
 
 @media screen and (max-width: 576px) {
  .wrapper  {
