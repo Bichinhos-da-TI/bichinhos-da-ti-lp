@@ -65,10 +65,9 @@ header {
   animation: slideOutWithPause 1s ease-in-out forwards;
 }
 .form-content {
-  background-color: var(--dark-blue-1, #050a1a);
+  background-color: var(--dark-blue-1);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 494px;
   min-height: 655px;
   display: flex;
