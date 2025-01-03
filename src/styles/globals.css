@@ -1,3 +1,5 @@
+@import "@angular/cdk/overlay-prebuilt.css";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -35,7 +37,7 @@ ul {
   --gray-ai: #050a1a;
   --orange-frog: #f76b00;
   --yellow-cat: #2b3559;
-  
+
   --title: "Krona One", sans-serif;
   --text: "Jura", sans-serif;
 
@@ -46,5 +48,5 @@ ul {
   --alt-gray: #f5f9fc;
   --alt-gray-ai: #d2e3f3;
   --alt-orange-frog: #f76b00;
-  --alt-yellow-cat: #f7bc03;  
+  --alt-yellow-cat: #f7bc03;
 }

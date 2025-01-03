@@ -31,9 +31,14 @@
       >
     </li>
     <li class="nav-item">
-      <a href="#" class="nav-link" (click)="openModal()">Faça parte</a>
+      <button class="form-btn" (click)="openModal()">Faça parte</button>
     </li>
-    <div *ngIf="isModalOpen" class="form-container" [ngClass]="modalAnimation">
+    <!-- <ng-template
+      class="form-container"
+      cdkPortalOutlet
+      [cdkConnectedOverlayOrigin]="trigger"
+      [cdkConnectedOverlayOpen]="isModalOpen"
+    >
       <div class="form-content" (click)="$event.stopPropagation()">
         <div class="close-container">
           <button class="btn-close" (click)="closeModal()">
@@ -54,7 +59,7 @@
         <input type="text" placeholder="Área" class="form-input" />
         <button class="form-button">QUERO SER VOLUNTÁRIO</button>
       </div>
-    </div>
+    </ng-template> -->
     <li class="nav-item"></li>
     <header-theme-toggle />
     <div class="menu-hamburguer-container">

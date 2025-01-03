@@ -1,18 +1,24 @@
-import { Component, Inject } from '@angular/core';
+import { Component, ComponentRef, inject, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+
 import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
 import { CommonModule } from '@angular/common';
-import { CloseButtonComponent } from '../close-button/close-button.component';
+import { LeadFormComponent } from '../../lead-form/lead-form.component';
+import { Overlay, OverlayModule, OverlayRef } from '@angular/cdk/overlay';
+import { ComponentPortal } from '@angular/cdk/portal';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ThemeToggleComponent, CommonModule, CloseButtonComponent],
+  imports: [CommonModule, ThemeToggleComponent, OverlayModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
   constructor(@Inject(DOCUMENT) private document: Document) {}
+
+  readonly overlay = inject(Overlay);
+  overlayRef?: OverlayRef;
 
   scrollToSection(sectionId: string): void {
     const section = this.document.getElementById(sectionId);
@@ -25,19 +31,34 @@ export class HeaderComponent {
       console.warn(`Section "${sectionId}" not found`);
     }
   }
-  isModalOpen: boolean = false;
-  modalAnimation: 'enter-animation' | 'exit-animation' | '' = '';
 
   openModal(): void {
-    this.modalAnimation = 'enter-animation';
-    this.isModalOpen = true;
+    if (!this.overlayRef) {
+      this.overlayRef = this.overlay.create({
+        positionStrategy: this.overlay
+          .position()
+          .global()
+          .centerHorizontally()
+          .centerVertically(),
+      });
+      const userProfilePortal = new ComponentPortal(LeadFormComponent);
+
+      const componentRef = this.overlayRef.attach(userProfilePortal);
+
+      componentRef.instance.closeOverlay = () => this.closeModal(componentRef);
+      componentRef.instance.setIsOpen(true);
+    }
   }
 
-  closeModal(): void {
-    this.modalAnimation = 'exit-animation';
-    setTimeout(() => {
-      this.isModalOpen = false;
-      this.modalAnimation = '';
-    }, 1000);
+  closeModal(componentRef: ComponentRef<LeadFormComponent>): void {
+    const overlayRef = this.overlayRef;
+    if (overlayRef) {
+      componentRef.instance.setIsOpen(false);
+
+      setTimeout(() => {
+        overlayRef.dispose();
+        this.overlayRef = undefined;
+      }, 150);
+    }
   }
 }
