@@ -41,9 +41,9 @@ export class HeaderComponent {
           .centerHorizontally()
           .centerVertically(),
       });
-      const userProfilePortal = new ComponentPortal(LeadFormComponent);
+      const formPortal = new ComponentPortal(LeadFormComponent);
 
-      const componentRef = this.overlayRef.attach(userProfilePortal);
+      const componentRef = this.overlayRef.attach(formPortal);
 
       componentRef.instance.closeOverlay = () => this.closeModal(componentRef);
       componentRef.instance.setIsOpen(true);
