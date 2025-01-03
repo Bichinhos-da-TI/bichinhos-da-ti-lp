@@ -61,6 +61,7 @@
   line-height: 28.8px;
   margin-top: 24px;
   cursor: pointer;
+  z-index: 2;
 }
 .content-image {
   margin-bottom: 288.4px;
