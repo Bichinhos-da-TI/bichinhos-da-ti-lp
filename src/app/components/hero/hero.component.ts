@@ -5,6 +5,7 @@ import { ComponentPortal } from '@angular/cdk/portal';
 
 import { SectionDividerComponent } from '../layout/section-divider/section-divider.component';
 import { LeadFormComponent } from '../lead-form/lead-form.component';
+import { FormOverlay } from 'src/app/lib/overlay/form-overlay';
 
 @Component({
   selector: 'app-hero',
@@ -14,36 +15,7 @@ import { LeadFormComponent } from '../lead-form/lead-form.component';
   styleUrl: './hero.component.css',
 })
 export class HeroComponent {
-  readonly overlay = inject(Overlay);
-  overlayRef?: OverlayRef;
+  formOverlay = new FormOverlay();
 
-  openModal(): void {
-    if (!this.overlayRef) {
-      this.overlayRef = this.overlay.create({
-        positionStrategy: this.overlay
-          .position()
-          .global()
-          .centerHorizontally()
-          .centerVertically(),
-      });
-      const formPortal = new ComponentPortal(LeadFormComponent);
-
-      const componentRef = this.overlayRef.attach(formPortal);
-
-      componentRef.instance.closeOverlay = () => this.closeModal(componentRef);
-      componentRef.instance.setIsOpen(true);
-    }
-  }
-
-  closeModal(componentRef: ComponentRef<LeadFormComponent>): void {
-    const overlayRef = this.overlayRef;
-    if (overlayRef) {
-      componentRef.instance.setIsOpen(false);
-
-      setTimeout(() => {
-        overlayRef.dispose();
-        this.overlayRef = undefined;
-      }, 150);
-    }
-  }
+  openModal = () => this.formOverlay.openModal();
 }

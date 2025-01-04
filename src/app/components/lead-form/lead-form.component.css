@@ -1,4 +1,5 @@
 .form-container {
+  position: relative;
   max-width: 558px;
   min-height: 719px;
   background-color: var(--dark-blue-1, #050a1a);
@@ -69,6 +70,7 @@
   gap: 8px;
   background-color: transparent;
   margin-top: 16px;
+  color: var(--gray);
 }
 
 .form-input::placeholder {
