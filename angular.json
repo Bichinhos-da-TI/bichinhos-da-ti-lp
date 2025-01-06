@@ -24,7 +24,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/custom-theme.scss", "src/styles/globals.css"],
+            "styles": ["src/styles/globals.css"],
             "scripts": ["node_modules/hammerjs/hammer.min.js"],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -84,7 +84,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/custom-theme.scss", "src/styles/globals.css"],
+            "styles": ["src/styles/globals.css"],
             "scripts": [],
             "builderMode": "browser"
           }

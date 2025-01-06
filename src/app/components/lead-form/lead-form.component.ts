@@ -2,7 +2,6 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import emailjs from '@emailjs/browser';
 
 import { CloseButtonComponent } from '../layout/close-button/close-button.component';
@@ -16,7 +15,6 @@ import { SpinnerComponent } from '../layout/spinner/spinner.component';
     FormsModule,
     CloseButtonComponent,
     OverlayModule,
-    MatProgressSpinnerModule,
     SpinnerComponent,
   ],
   templateUrl: './lead-form.component.html',
