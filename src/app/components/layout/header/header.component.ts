@@ -22,9 +22,12 @@ export class HeaderComponent {
   scrollToSection(sectionId: string): void {
     const section = this.document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({
+      const offset = 100;
+      const sectionPosition =
+        section.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({
+        top: sectionPosition,
         behavior: 'smooth',
-        block: 'start',
       });
     } else {
       console.warn(`Section "${sectionId}" not found`);
