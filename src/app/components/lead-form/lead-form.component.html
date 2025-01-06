@@ -1,7 +1,11 @@
-<div class="form-container" [ngClass]="{ active: isOpen }">
+<form
+  class="form-container"
+  [ngClass]="{ active: isOpen }"
+  (ngSubmit)="sendEmail($event)"
+>
   <div class="form-content" (click)="$event.stopPropagation()">
     <div class="close-container">
-      <button class="btn-close" (click)="closeOverlay()">
+      <button class="btn-close" type="reset" (click)="closeOverlay()">
         <app-close-button color="var(--alt-dark-blue, var(--gray))" />
       </button>
     </div>
@@ -12,11 +16,36 @@
       voluntário e ajude a construir projetos que impactam o futuro da
       tecnologia.
     </p>
-    <input type="text" placeholder="Nome" class="form-input" />
-    <input type="text" placeholder="Email" class="form-input" />
-    <input type="text" placeholder="Telefone" class="form-input" />
-    <input type="text" placeholder="LinkedIn" class="form-input" />
-    <input type="text" placeholder="Área" class="form-input" />
-    <button class="form-button">QUERO SER VOLUNTÁRIO</button>
+    <input type="text" placeholder="Nome" class="form-input" name="lead_name" />
+    <input
+      type="text"
+      placeholder="Email"
+      class="form-input"
+      name="lead_email"
+    />
+    <input
+      type="text"
+      placeholder="Telefone"
+      class="form-input"
+      name="lead_phone"
+    />
+    <input
+      type="text"
+      placeholder="LinkedIn"
+      class="form-input"
+      name="lead_linkedin"
+    />
+    <input type="text" placeholder="Área" class="form-input" name="lead_area" />
+    <button
+      class="form-button"
+      [disabled]="isLoading"
+      type="submit"
+      value="Send"
+    >
+      <ng-container *ngIf="isLoading; else defaultContent">
+        <app-spinner />
+      </ng-container>
+      <ng-template #defaultContent>QUERO SER VOLUNTÁRIO</ng-template>
+    </button>
   </div>
-</div>
+</form>

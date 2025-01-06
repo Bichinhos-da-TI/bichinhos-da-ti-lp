@@ -82,7 +82,8 @@
 
 .form-button {
   max-width: 494px;
-  min-height: 53px;
+  max-height: 53px;
+  height: 100%;
   background-color: var(--orange-frog, #f76b00);
   border: none;
   border-radius: 16px;
@@ -99,6 +100,10 @@
   margin-top: 24px;
   cursor: pointer;
   white-space: nowrap;
+}
+
+.form-button:disabled {
+  cursor: progress;
 }
 
 @keyframes fade {
