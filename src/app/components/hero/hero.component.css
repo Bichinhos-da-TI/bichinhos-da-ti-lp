@@ -137,12 +137,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
   }
   .content-text {
     display: flex;
     order: 1;
     align-self: center;
     gap: 24px;
+    margin-top: 0;
   }
   .hero-title {
     width: 261px;
@@ -234,7 +236,7 @@
     line-height: 22.4px;
   }
   app-section-divider {
-    width: 215px;
+    width: 251.11px;
   }
 }
 @media (max-width: 768px) {
