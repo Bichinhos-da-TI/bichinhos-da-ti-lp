@@ -78,30 +78,28 @@
   position: relative;
   z-index: 0;
 }
-#dashed {
+.dashed {
   width: 100%;
-  max-width: 468px;
+  width: 468px;
   height: 468px;
   border-radius: 468px;
-  border: 2px dashed#F7BC03;
   border-radius: 50%;
   position: absolute;
   z-index: 2;
 }
-#black {
+.black {
   width: 100%;
-  max-width: 490px;
+  width: 490px;
   height: 490px;
   border-radius: 468px;
-  border: 26px solid black;
+  border: 26px solid transparent;
   border-radius: 50%;
   position: absolute;
   z-index: 1;
-  box-shadow: 2px 2px 20px 5px #33c4cb;
 }
-#orange {
+.orange {
   width: 100%;
-  max-width: 438px;
+  width: 438px;
   height: 438px;
   border-radius: 438px;
   border-radius: 50%;
@@ -191,7 +189,7 @@
     z-index: 0;
   }
 
-  #black {
+  .black {
     width: 241.4px;
     height: 241.4px;
     border-radius: 50%;
@@ -199,15 +197,14 @@
     z-index: 1;
   }
 
-  #dashed {
+  .dashed {
     width: 241.4px;
     height: 241.4px;
-    border-radius: 50%;
     position: absolute;
     z-index: 2;
   }
 
-  #orange {
+  .orange {
     width: 225.92px;
     height: 225.92px;
     border-radius: 50%;
@@ -236,7 +233,7 @@
     line-height: 22.4px;
   }
   app-section-divider {
-    width: 251.11px;
+    width: 215px;
   }
 }
 @media (max-width: 768px) {
