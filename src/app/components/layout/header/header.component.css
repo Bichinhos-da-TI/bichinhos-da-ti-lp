@@ -168,3 +168,30 @@ header {
     display: block;
   }
 }
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  header {
+    min-height: 96px;
+    justify-content: space-between;
+    padding-right: 57px;
+    padding-left: 57px;
+  }
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-item {
+    display: none;
+  }
+  .logo-link {
+    max-width: 148px;
+    min-height: 35.12px;
+  }
+  header-theme-toggle {
+    display: none;
+  }
+  .menu-hamburguer-container {
+    display: block;
+  }
+}

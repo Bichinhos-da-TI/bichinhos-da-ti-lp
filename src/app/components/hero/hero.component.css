@@ -244,6 +244,14 @@
   .hero-button {
     font-size: 16px;
   }
+  .text-button {
+    font-family: var(--text, "Jura", sans-serif);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22.4px;
+    min-height: 22px;
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 1024px) {
