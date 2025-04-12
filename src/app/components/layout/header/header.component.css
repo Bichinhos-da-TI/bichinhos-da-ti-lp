@@ -15,7 +15,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 32px;
+  justify-content: space-between;
   padding-top: 37px;
   padding-bottom: 37px;
   max-width: 1124px;

@@ -21,6 +21,8 @@ section {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 64px;
 }
 .project-card {
   display: flex;
@@ -28,7 +30,6 @@ section {
   max-width: 332px;
   align-items: center;
   justify-content: center;
-  margin-right: 64px;
 }
 .project-title {
   color: var(--gray, #f5f9fc);
@@ -38,8 +39,7 @@ section {
   font-size: 24px;
   margin-bottom: 16px;
 }
-.image-container {
-}
+
 .project-description {
   color: var(--gray, #f5f9fc);
   font-family: var(--text, "Jura", sans-serif);
@@ -50,10 +50,13 @@ section {
 }
 
 @media (max-width: 480px) {
+  section {
+    padding: 64px 22px 64px 22px;
+  }
+
   #impact-projects {
     display: grid;
     place-content: center;
-    padding: 64px 57px 64px 57px;
     gap: 64px;
   }
   .title-section {
@@ -76,8 +79,7 @@ section {
     margin: 0 auto;
     gap: 16px;
   }
-  .project-title {
-  }
+
   .image-container {
     margin: 0 auto;
   }
